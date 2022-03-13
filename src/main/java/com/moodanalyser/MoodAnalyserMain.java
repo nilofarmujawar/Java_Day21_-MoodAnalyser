@@ -1,12 +1,12 @@
 package com.moodanalyser;
 
 /**
- * TC 2.1 :-
- * Given Null Mood Should Return Happy
+ * UC 3 :-
+ * Inform user if entered Invalid Mood
  *
- * To make this Test Case pass Handle
- * NULL Scenario using try catch and
- * return Happy
+ *  - In case of NULL or Empty Mood throw Custom Exception MoodAnalysisException
+ *
+ *  - Use Enum to differentiate the Mood Analysis Errors
  */
 
 /**
@@ -26,14 +26,20 @@ public class MoodAnalyserMain {
         this.message = message;
     }
 
-    public String analyseMood() {
+    public String analyseMood() throws MoodAnalysisException {
         try {
-            if (this.message.contains("Sad"))
+            if (message.contains("Sad"))
                 return "SAD";
             else
                 return "HAPPY";
-        } catch (NullPointerException e) {
-            return "HAPPY";
+        }
+        catch (Exception e) {
+            if (message == null)
+                throw new MoodAnalysisException("Please provide valid mood, dont provide null in arguments",
+                        MoodAnalysisException.Exception_Type.NULL);
+            else
+                throw new MoodAnalysisException("Please provide valid mood, dont keep empty in arguments",
+                        MoodAnalysisException.Exception_Type.EMPTY);
         }
     }
 }
