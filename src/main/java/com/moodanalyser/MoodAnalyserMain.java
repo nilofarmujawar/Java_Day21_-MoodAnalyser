@@ -1,12 +1,11 @@
 package com.moodanalyser;
 
 /**
- * UC 3 :-
- * Inform user if entered Invalid Mood
+ * TC 3.1 :-
+ * Given NULL Mood Should Throw  MoodAnalysisException
  *
- *  - In case of NULL or Empty Mood throw Custom Exception MoodAnalysisException
+ * To pass this Test Case in try catch block throw MoodAnalysisException
  *
- *  - Use Enum to differentiate the Mood Analysis Errors
  */
 
 /**
