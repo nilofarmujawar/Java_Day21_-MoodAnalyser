@@ -1,9 +1,12 @@
 package com.moodanalyser;
 
 /**
- * UC 2 :-
- * Handle Exception if User Provides Invalid  Mood
- * - Like NULL
+ * TC 2.1 :-
+ * Given Null Mood Should Return Happy
+ *
+ * To make this Test Case pass Handle
+ * NULL Scenario using try catch and
+ * return Happy
  */
 
 /**
